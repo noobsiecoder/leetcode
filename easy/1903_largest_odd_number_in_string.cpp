@@ -1,4 +1,5 @@
 #include <iostream>
+#include <assert.h>
 
 class Solution
 {
@@ -6,10 +7,8 @@ public:
     std::string largestOddNumber(std::string num)
     {
         size_t size = num.length();
-        if (size <= 1)
-            return "";
-
         std::string largest_odd_value = "";
+
         for (int i = size - 1; i >= 0; i--)
         {
             if ((int)num[i] % 2 != 0)
@@ -25,9 +24,9 @@ public:
 int main(int argc, char *argv[])
 {
     Solution solution;
-    std::cout << solution.largestOddNumber("52") << std::endl;
-    std::cout << solution.largestOddNumber("5230456") << std::endl;
-    std::cout << solution.largestOddNumber("520453") << std::endl;
-    std::cout << solution.largestOddNumber("132321") << std::endl;
+    assert(solution.largestOddNumber("52") == "5");
+    assert(solution.largestOddNumber("5230456") == "523045");
+    assert(solution.largestOddNumber("520453") == "520453");
+    assert(solution.largestOddNumber("132321") == "132321");
     return 0;
 }
