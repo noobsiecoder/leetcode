@@ -2,6 +2,7 @@
 #include <vector>
 #include <map>
 #include <set>
+#include <assert.h>
 
 // Runtime: 452ms;      Beats 43.06% of users with C++
 // Memory: 159.24MB;    Beats 88.52% of users with C++
@@ -60,27 +61,21 @@ public:
 
 int main(int argc, char *argv[])
 {
-    // std::vector<std::string> foods = {"kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"};
-    // std::vector<std::string> cuisine = {"korean", "japanese", "japanese", "greek", "japanese", "korean"};
-    // std::vector<int> ratings = {9, 12, 8, 15, 14, 7};
-
     std::vector<std::string> foods = {"tjokfmxg", "xmiuwozpmj", "uqklk", "mnij", "iwntdyqxi", "cduc", "cm", "mzwfjk"};
     std::vector<std::string> cuisine = {"waxlau", "ldpiabqb", "ldpiabqb", "waxlau", "ldpiabqb", "waxlau", "waxlau", "waxlau"};
     std::vector<int> ratings = {9, 13, 7, 16, 10, 17, 16, 17};
 
     FoodRatings *obj = new FoodRatings(foods, cuisine, ratings);
     obj->changeRating("tjokfmxg", 19);
-    std::cout << obj->highestRated("waxlau") << std::endl;
+    assert(obj->highestRated("waxlau") == "tjokfmxg");
     obj->changeRating("uqklk", 7);
-    std::cout << obj->highestRated("waxlau") << std::endl;
-    std::cout << obj->highestRated("waxlau") << std::endl;
+    assert(obj->highestRated("waxlau") == "tjokfmxg");
     obj->changeRating("tjokfmxg", 14);
-    std::cout << obj->highestRated("waxlau") << std::endl;
-    std::cout << obj->highestRated("waxlau") << std::endl;
+    assert(obj->highestRated("waxlau") == "cduc");
     obj->changeRating("tjokfmxg", 4);
-    std::cout << obj->highestRated("waxlau") << std::endl;
+    assert(obj->highestRated("waxlau") == "cduc");
     obj->changeRating("mnij", 18);
-    std::cout << obj->highestRated("waxlau") << std::endl;
+    assert(obj->highestRated("waxlau") == "mnij");
 
     return 0;
 }
