@@ -22,14 +22,6 @@ private:
     // stores a sets of foods by cuisine where each set is sorted by rating
     std::map<std::string, std::set<RatingPairType>> cuisine_map;
 
-    struct type_cuisine_rating
-    {
-        std::string cuisine;
-        int rating;
-    };
-
-    std::map<std::string, type_cuisine_rating> food_ratings;
-
 public:
     // constructor to build data in the object
     FoodRatings(std::vector<std::string> &foods, std::vector<std::string> &cuisines, std::vector<int> &ratings)
