@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <assert.h>
 
+// Runtime: 20ms; Beats 74.89% of users with C++
+// Memory:  20.60MB; Beats 97.27% of users with C++
 class Solution
 {
 public:
