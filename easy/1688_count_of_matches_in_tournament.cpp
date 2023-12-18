@@ -1,4 +1,5 @@
 #include <iostream>
+#include <assert.h>
 
 class Solution
 {
@@ -27,7 +28,7 @@ public:
 int main(int argc, char *argv[])
 {
     Solution solution;
-    std::cout << solution.numberOfMatches(7) << std::endl;
-    std::cout << solution.numberOfMatches(14) << std::endl;
+    assert(solution.numberOfMatches(7) == 6);
+    assert(solution.numberOfMatches(14) == 13);
     return 0;
 }

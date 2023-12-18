@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <assert.h>
 
 // Runtime: 0ms; Beats 100.00% of users with C++
 // Memory:  11.52MB; Beats 99.04% of users with C++
@@ -38,14 +39,14 @@ int main(int argc, char *argv[])
     Solution solution;
     std::vector<std::string> arr1 = {"ab", "c"};
     std::vector<std::string> arr2 = {"a", "bc"};
-    std::cout << solution.arrayStringsAreEqual(arr1, arr2) << std::endl;
+    assert(solution.arrayStringsAreEqual(arr1, arr2));
 
     arr1 = {"a", "cb"};
     arr2 = {"a", "bc"};
-    std::cout << solution.arrayStringsAreEqual(arr1, arr2) << std::endl;
+    assert(!solution.arrayStringsAreEqual(arr1, arr2));
 
     arr1 = {"abc", "d", "defg"};
     arr2 = {"abcddefg"};
-    std::cout << solution.arrayStringsAreEqual(arr1, arr2) << std::endl;
+    assert(solution.arrayStringsAreEqual(arr1, arr2));
     return 0;
 }

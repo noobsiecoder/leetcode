@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <assert.h>
 
 class Solution
 {
@@ -25,13 +26,13 @@ int main(int argc, char *argv[])
 {
     Solution solution;
     std::vector<int> arr = {3, 4, 5, 2};
-    std::cout << solution.maxProduct(arr) << std::endl;
+    assert(solution.maxProduct(arr) == 34);
 
     arr = {1, 5, 4, 5};
-    std::cout << solution.maxProduct(arr) << std::endl;
+    assert(solution.maxProduct(arr) == 64);
 
     arr = {3, 7};
-    std::cout << solution.maxProduct(arr) << std::endl;
+    assert(solution.maxProduct(arr) == 41);
 
     return 0;
 }

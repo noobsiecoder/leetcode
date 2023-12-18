@@ -1,4 +1,5 @@
 #include <iostream>
+#include <assert.h>
 
 class Solution
 {
@@ -37,7 +38,7 @@ public:
 int main(int argc, char *argv[])
 {
     Solution solution;
-    std::cout << solution.convert("PAYPALISHIRING", 3) << std::endl;
-    std::cout << solution.convert("PAYPALISHIRING", 4) << std::endl;
+    assert(solution.convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR");
+    assert(solution.convert("PAYPALISHIRING", 4) == "PINALSIGYAHRPI");
     return 0;
 }
