@@ -46,9 +46,9 @@ public:
 int main(int argc, char *argv[])
 {
     Solution solution;
-    std::cout << solution.isPathCrossing("NES") << std::endl;
-    std::cout << solution.isPathCrossing("NESWW") << std::endl;
-    std::cout << solution.isPathCrossing("NNSWWEWSSESSWENNW") << std::endl;
+    assert(!solution.isPathCrossing("NES"));
+    assert(solution.isPathCrossing("NESWW"));
+    assert(solution.isPathCrossing("NNSWWEWSSESSWENNW"));
 
     return 0;
 }
