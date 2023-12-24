@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 {
     Solution solution;
     assert(solution.isValid("(){}[]"));
-    assert(solution.isValid("()}[]"));
+    assert(!solution.isValid("()}[]"));
     
     return 0;
 }
