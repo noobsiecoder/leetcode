@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 // Runtime: 304ms; Beats 5.96% of users with C++
 // Memory:  95.60MB; Beats 99.55% of users with C++
@@ -32,15 +33,15 @@ int main(int argc, char *argv[])
     Solution solution;
     std::string colors = "abaac";
     std::vector<int> neededTime = {1, 2, 3, 4, 5};
-    std::cout << solution.minCost(colors, neededTime) << std::endl;
+    assert(solution.minCost(colors, neededTime) == 3);
 
     colors = "aabaa";
     neededTime = {1, 2, 3, 4, 1};
-    std::cout << solution.minCost(colors, neededTime) << std::endl;
+    assert(solution.minCost(colors, neededTime) == 2);
 
     colors = "brbbrbbb";
     neededTime = {1, 4, 2, 4, 3, 3, 2, 5};
-    std::cout << solution.minCost(colors, neededTime) << std::endl;
+    assert(solution.minCost(colors, neededTime) == 7);
 
     return 0;
 }
