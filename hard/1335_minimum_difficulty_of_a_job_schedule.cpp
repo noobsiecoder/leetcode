@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cassert>
 
 // Runtime: 22ms; Beats 79.04% of users with C++
 // Memory:  8.18MB; Beats 33.73% of users with C++
@@ -56,12 +57,12 @@ int main(int argc, char *argv[])
 {
     Solution solution;
     std::vector<int> jobDifficulties = {9, 9, 9};
-    std::cout << solution.minDifficulty(jobDifficulties, 4) << std::endl;
+    assert(solution.minDifficulty(jobDifficulties, 4) == -1);
 
     jobDifficulties = {1, 1, 1};
-    std::cout << solution.minDifficulty(jobDifficulties, 3) << std::endl;
+    assert(solution.minDifficulty(jobDifficulties, 3) == 3);
 
     jobDifficulties = {6, 5, 4, 3, 2, 1};
-    std::cout << solution.minDifficulty(jobDifficulties, 2) << std::endl;
+    assert(solution.minDifficulty(jobDifficulties, 2) == 7);
     return 0;
 }
