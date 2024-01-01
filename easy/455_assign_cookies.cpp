@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cassert>
 
 // Runtime: 23ms; Beats 61.11% of users with C++
 // Memory:  17.74MB; Beats 75.56% of users with C++
@@ -38,11 +39,11 @@ int main(int argc, char *argv[])
     Solution solution;
     std::vector<int> children = {1, 2, 3};
     std::vector<int> cookieSize = {1, 1};
-    std::cout << solution.findContentChildren(children, cookieSize) << std::endl;
+    assert(solution.findContentChildren(children, cookieSize) == 1);
 
     children = {1, 2};
     cookieSize = {1, 2, 3};
-    std::cout << solution.findContentChildren(children, cookieSize) << std::endl;
+    assert(solution.findContentChildren(children, cookieSize) == 2);
 
     return 0;
 }
