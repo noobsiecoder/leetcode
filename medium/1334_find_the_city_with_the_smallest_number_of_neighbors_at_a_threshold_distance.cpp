@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cassert>
 #include <vector>
 #include <map>
@@ -94,10 +93,10 @@ int main(int argv, char **args)
     DoubleVectorType<int> edges = {{0, 1, 3}, {1, 2, 1}, {1, 3, 4}, {2, 3, 1}};
     Solution *solution = new Solution;
     int result = solution->findTheCity(4, edges, 4);
-    std::cout << result << std::endl;
+    assert(result == 3);
 
     edges = {{0, 1, 2}, {0, 4, 8}, {1, 2, 3}, {1, 4, 2}, {2, 3, 1}, {3, 4, 1}};
     result = solution->findTheCity(5, edges, 2);
-    std::cout << result << std::endl;
+    assert(result == 0);
     return 0;
 }
