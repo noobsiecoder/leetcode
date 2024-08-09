@@ -1,6 +1,5 @@
 #include <vector>
 #include <string>
-#include <iostream>
 #include <cassert>
 
 // type alias for 2-dimensional vector class
@@ -24,7 +23,6 @@ private:
         for (const std::size_t num : idx)
             str += std::to_string(grid[i + num / 3][j + num % 3]);
 
-        std::cout << str << std::endl;
         return check_str1.find(str) != std::string::npos || check_str2.find(str) != std::string::npos;
     }
 
